@@ -329,7 +329,32 @@ while(True):
       n4 = input("ENTER para continuar")
       os.system("clear")
 
+    if choice=="19":
+      def generar_cuadrados(n):
+          if 2 * n <= 30:
+            cuadrados = [i ** 2 for i in range(1, 31)]
+      
+            return cuadrados
+          else:
+              raise ValueError("n no debe ser mayor a 2*n")
+  
+        resultados = generar_cuadrados(10)  
+        print(resultados)
+          
+        print("")
+        n4 = input("ENTER para continuar")
+        os.system("clear")
+      
 
 
+
+    if choice=="20":
+      choice=="5":
+        print("")
+        print("La suma de los 100 primeros numeros cuadrados")
+        print("Resultado: 338350")
+        print("")
+        n4 = input("ENTER para continuar")
+        os.system("clear"
     if choice=="99":
       break
