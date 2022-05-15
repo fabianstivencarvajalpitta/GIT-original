@@ -338,23 +338,23 @@ while(True):
           else:
               raise ValueError("n no debe ser mayor a 2*n")
   
-        resultados = generar_cuadrados(10)  
-        print(resultados)
+              resultados = generar_cuadrados(10)  
+              print(resultados)
           
-        print("")
-        n4 = input("ENTER para continuar")
-        os.system("clear")
+              print("")
+      n4 = input("ENTER para continuar")
+      os.system("clear")
       
 
 
 
     if choice=="20":
-      choice=="5":
         print("")
         print("La suma de los 100 primeros numeros cuadrados")
         print("Resultado: 338350")
         print("")
         n4 = input("ENTER para continuar")
-        os.system("clear"
+        os.system("clear")
     if choice=="99":
-      break
+      print("Gracias por participar, Creado por fabian carvajal")
+      
