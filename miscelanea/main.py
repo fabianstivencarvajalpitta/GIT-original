@@ -1,3 +1,4 @@
+
 while(True):
     print(" bienvenido a mi proyecto: fabian carvajal")
     print("                                                ")
@@ -33,7 +34,15 @@ while(True):
     print("22: sumar todos los numeros")
     print("99: FIN ")
     print("                                                        ")
-    print("ingrese el numero del ejercicio")
+    print("ARREGLOS")
+    print("                                                        ")
+    print("23:Numeros aleatorios")
+    print("24:Organizacion de elementos en inversa")
+    print("25: Organizacion de numero de menor a mayor, mayor a menor y de menor a mayor ")
+    print("26: En arreglo decir cual es mayor y cual es menor")
+    print("27: Convertir numeros ingresados en *")
+    print("28: Identificar cantidad de veces que aparece un número en un arreglo")
+    print("29: Identificar si un número es impar y par")
     
 
 
@@ -355,6 +364,214 @@ while(True):
         print("")
         n4 = input("ENTER para continuar")
         os.system("clear")
+    if choice=="21":
+          print("Digite dos numeros")
+          n1=int(input('Digite el número inicial de la secuencia \n'))
+          n2=int(input('Digite el número final de la secuencia \n'))  
+          nums=[]
+          for i in range(n1, n2 + 1):
+            nums.append(i)
+          print('\n La secuencia ascendente de los números es:', nums)
+          n4 = input("ENTER para continuar")
+          os.system("clear") 
+    if choice=="22":
+          print("digite digites para sumar infinitamente hasta el cero")
+          nums=[]
+          while True:
+              n=float(input('Digite el número a sumar, para concluir la suma por favor digite 0:'))
+              if n!=0:
+                  nums.append(n)
+              else:
+                  break
+          print('Los números digitados fueron:', nums)
+          print('La suma de los números fue:', sum(nums))
+          n4 = input("Enter para continuar")
+          os.system("clear")
+
+       #arreglos
+    if choice=="23":
+            nums=[]
+            aux=None
+            while True:
+                cant=int(input('Ingrese la cantidad de números que desea ver\n'))
+                for i in range(cant):
+                    n=random.randint(-100,100)
+                    nums.append(n)
+                print(nums)
+                for i in range(len(nums)-1):
+                  for i in range(len(nums)-1):
+                    if nums[i]>=nums[i+1]:
+                      aux=nums[i+1]
+                      nums[i+1]=nums[i]
+                      nums[i]=aux
+                print(nums)
+                break
+            n4 = input("ENTER para continuar")
+            os.system("clear")
+  
+    
+    if choice=="24":
+        print("")
+        lista = []
+        print("introducir 10 elementos")
+        print("elemento 1:")
+        n1 = int(input())
+        print("elemento 2:")
+        n2 = int(input())
+        print("elemento 3:")
+        n3 = int(input())
+        print("elemento 4:")
+        n4 = int(input())
+        print("elemento 5:")
+        n5 = int(input())
+        print("elemento 6:")
+        n6 = int(input())
+        print("elemento 7:")
+        n7 = int(input())
+        print("elemento 8:")
+        n8 = int(input())
+        print("elemento 9:")
+        n9 = int(input())
+        print("elemento 10:")
+        n10 = int(input())
+        lista.append(n1)
+        lista.append(n2)
+        lista.append(n3)
+        lista.append(n4)
+        lista.append(n5)
+        lista.append(n6)
+        lista.append(n7)
+        lista.append(n8)
+        lista.append(n9)
+        lista.append(n10)
+        lista.reverse()
+        print(lista)
+        n98 = input("ENTER para continuar")
+        os.system("clear")
+        
+               
+    if choice=="25":
+        print("")
+        n = 10
+        print("Ingresar 10 numeros:")  
+        lista=[]
+        for x in range(n):
+            valor=float(input("Ingrese un numero: ")) 
+            lista.append(valor)
+        
+        RecorrerLista = False 
+        while RecorrerLista == False: 
+            RecorrerLista = True
+    
+            for i in range(len(lista)-1):
+                if lista[i] > lista[i + 1]:
+                    VariableAuxiliar = lista[i]
+                    lista[i] = lista[i + 1]
+                    lista[i + 1] = VariableAuxiliar
+                    RecorrerLista = False
+
+        print("Orden ASCENDENTE (de menor a mayor): ")
+        for i in range(0,n,1):
+            print(lista[i])
+
+        print("Orden DESCENDENTE (de mayor a menor): ")
+        longitud_lista=len(lista)
+        for i in range(longitud_lista//2):
+            lista[i], lista[longitud_lista-i-1] = lista[longitud_lista-i-1], lista[i]
+        print(lista)
+        print("Orden ASCENDENTE (de menor a mayor): ")
+        lista.reverse()
+        for a in range(0,n,1):
+            print(lista[a])
+        n4 = input("ENTER para continuar")
+        os.system("clear")
+    if choice=="26":
+        print("")
+        print("ingrese la cantidad de elementos que desea en su arreglo")
+        n = int(input())
+        print(f"Ingresar {n} numeros:")  
+        lista=[]
+        for x in range(n):
+          valor=float(input("Ingrese un numero: ")) 
+          lista.append(valor)
+
+
+
+        def mayor_de_arreglo(lista):
+    
+            mayor = lista[0]
+
+            for elemento in lista:
+              if elemento > mayor:
+                mayor = elemento
+            return mayor
+
+
+        def menor_de_arreglo(lista):
+            menor = lista[0]
+            for elemento in lista:
+              if elemento < menor:
+                menor = elemento
+            return menor
+
+        mayor = mayor_de_arreglo(lista)
+        menor = menor_de_arreglo(lista)
+        print(f"Del arreglo {lista} el mayor es {mayor} y el menor es {menor}")
+
+        n4 = input("Enter para continuar")
+        os.system("clear")
+    if choice=="27":
+        nums=[]
+        n1 = int(input("Ingresar la cantidad de numeros de desea ingresar: "))
+        for i in range(n1):
+          n=int(input('Digite un numero: '))
+          nums.append(n)
+        for i in nums:
+          print(i,'->',i*'*')
+        n4 = input("Enter para continuar")
+        os.system("clear")
+    if choice=="28":
+          counts=dict()
+          nums=[]
+          n3 = int(input("Ingrese el rango de numeros que desea tener en el buscador"))
+          for i in range(n3):
+              n=int(input('Digite un numero: '))
+              nums.append(n)
+          for num in nums :
+              counts [num] = counts.get (num, 0) + 1
+          x=int(input('Ingrese el número que desea buscar: \n'))
+          try:
+            print('el número {} está {} veces'.format(x, counts[x]))
+          except:
+            print('no se encontró el número {} en la lista'.format(x))
+          n4 = input("Enter para continuar")
+          os.system("clear")
+    if choice=="29":
+        print("Digite Sus 8 Numeros")
+        valores = 8
+        valor1 = 0
+        impar = []
+        par = []
+        lista = []
+        while valor1 < valores:
+          print("Llevas Digitado", (valor1 + 1), "Numeros")
+          enteros = int(input())
+          lista.append(enteros)
+          valor1 += 1
+        for i in range(valores):
+          if lista[i] % 2 == 0:
+            par.append(lista[i])
+          else:
+            impar.append(lista[i])
+        impar.sort()
+        par.sort()
+        print("El Arreglo Que Diste Fue: \n"+ str(lista),"\n""Los Numeros Impares Del Arreglo Son: \n"+ str(impar),"\n""Los Numeros Pares Del Arreglo Son: \n"+ str(par))
+        n4 = input("ENTER para continuar")
+        os.system("clear")
+      
     if choice=="99":
       print("Gracias por participar, Creado por fabian carvajal")
+
+
+       
       
